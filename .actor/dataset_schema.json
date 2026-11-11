@@ -1,0 +1,49 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Products",
+            "transformation": {
+                "fields": ["title", "price", "currency", "rating", "reviewCount", "brand", "seller", "url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "price": {
+                        "label": "Price",
+                        "format": "number"
+                    },
+                    "currency": {
+                        "label": "Currency",
+                        "format": "text"
+                    },
+                    "rating": {
+                        "label": "Rating",
+                        "format": "number"
+                    },
+                    "reviewCount": {
+                        "label": "Reviews",
+                        "format": "number"
+                    },
+                    "brand": {
+                        "label": "Brand",
+                        "format": "text"
+                    },
+                    "seller": {
+                        "label": "Seller",
+                        "format": "text"
+                    },
+                    "url": {
+                        "label": "Product URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}

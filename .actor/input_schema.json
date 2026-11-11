@@ -1,0 +1,47 @@
+{
+    "title": "Bol.com Product Scraper",
+    "description": "Scrape products from bol.com search result pages: title, price, rating, brand, seller and image. Paste one or more bol.com search URLs, or type a keyword.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "Search URLs",
+            "type": "array",
+            "description": "Bol.com search result URLs, for example https://www.bol.com/nl/nl/s/?searchtext=waterkoker. Filters and sort order in the URL are kept. Product pages are not supported.",
+            "editor": "stringList",
+            "prefill": ["https://www.bol.com/nl/nl/s/?searchtext=waterkoker"],
+            "default": ["https://www.bol.com/nl/nl/s/?searchtext=waterkoker"]
+        },
+        "keyword": {
+            "title": "Keyword (replaces the URLs above)",
+            "type": "string",
+            "description": "Search term used instead of the URL list, for example waterkoker. Leave empty to use the URLs above.",
+            "editor": "textfield"
+        },
+        "maxResults": {
+            "title": "Maximum products",
+            "type": "integer",
+            "description": "Stop after this many products. Default 20.",
+            "editor": "number",
+            "minimum": 1,
+            "default": 20
+        },
+        "maxPages": {
+            "title": "Maximum result pages",
+            "type": "integer",
+            "description": "Safety cap on result pages per search. Bol.com currently returns at most 10 pages for a search. Default 5.",
+            "editor": "number",
+            "minimum": 1,
+            "default": 5
+        },
+        "proxyConfiguration": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "Choose to use no proxy, Apify Proxy, or your own proxy URLs.",
+            "editor": "proxy",
+            "default": {}
+        }
+    },
+    "required": [],
+    "additionalProperties": false
+}
